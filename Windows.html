@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Haupteil:Bau</title>
+</head>
+<style>
+        h1 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 40px;
+        text-align: center;
+        text-decoration-line: underline;
+    }
+
+    h2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+    }
+
+    p {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 25px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: hsl(202, 100%, 50%);
+
+    }
+
+    ul li {
+
+        float: left;
+        margin: 20px;
+        font-family: monospace;
+    }
+
+    ul li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 40px;
+    }
+
+    li {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h3{ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+</style>
+
+<body>
+    <ul>
+        <li><a href="Komponenten.html">Komponenten aussuchen</a></li>
+        <li><a href="Bau.html">Bau Prozess</a></li>
+        <li><a href="Windows.html">Windows Installation und Setup</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+     <h1>Windows installieren – Schritt für Schritt</h1>
+
+  <h2>1. Vorbereitung des Installationsmediums</h2>
+  <p>Bevor Windows installiert werden kann, benötigt man ein bootfähiges Installationsmedium.</p>
+  <ol>
+    <li>Das „Windows Media Creation Tool“ von Microsoft herunterladen.</li>
+    <li>Einen USB-Stick mit mindestens 8 GB einstecken.</li>
+    <li>Im Tool „Installationsmedium erstellen“ auswählen.</li>
+    <li>Sprache, Edition und Architektur (meist 64-bit) festlegen.</li>
+    <li>Als Medium „USB-Stick“ auswählen und erstellen lassen.</li>
+  </ol>
+  <p><strong>Ergebnis:</strong> Der USB-Stick ist nun bootfähig und enthält das Windows-Setup.</p>
+
+  <h2>2. BIOS/UEFI konfigurieren</h2>
+  <p>Damit der PC vom USB-Stick starten kann:</p>
+  <ol>
+    <li>PC einschalten und die UEFI/BIOS-Taste drücken (DEL, F2, ESC oder F12).</li>
+    <li>Im „Boot-Menü“ den USB-Stick als erstes Boot-Gerät auswählen.</li>
+    <li>Änderungen speichern und neu starten.</li>
+  </ol>
+
+  <h2>3. Windows-Setup starten</h2>
+  <p>Nach dem Neustart lädt der PC das Windows-Setup. Dort wählt man:</p>
+  <ul>
+    <li>Sprache</li>
+    <li>Uhrzeit-Format</li>
+    <li>Tastaturlayout</li>
+  </ul>
+  <p>Anschließend auf <strong>„Jetzt installieren“</strong> klicken.</p>
+  <p>Wenn nach einem Produktschlüssel gefragt wird, kann man ihn eingeben oder „Ich habe keinen Product Key“ auswählen.</p>
+
+  <h2>4. Installationsart wählen</h2>
+  <p>Es gibt zwei Optionen:</p>
+  <ul>
+    <li><strong>Upgrade</strong> – bestehendes System aktualisieren</li>
+    <li><strong>Benutzerdefiniert (fortgeschritten)</strong> – für neue PCs geeignet</li>
+  </ul>
+  <p>Für einen selbstgebauten PC wählt man <strong>Benutzerdefiniert</strong>.</p>
+
+  <h2>5. Festplatte/SSD einrichten</h2>
+  <ol>
+    <li>Die Ziel-SSD auswählen.</li>
+    <li>Vorhandene Partitionen (falls vorhanden) löschen.</li>
+    <li>Auf <strong>„Weiter“</strong> klicken – Windows erstellt die nötigen Partitionen automatisch.</li>
+  </ol>
+
+  <h2>6. Installation</h2>
+  <p>Windows kopiert jetzt die Dateien. Der PC startet mehrfach neu. Der USB-Stick bleibt eingesteckt.</p>
+  <p>Dauer: 5–20 Minuten.</p>
+
+  <h2>7. Ersteinrichtung (OOBE)</h2>
+  <p>Nach der Installation folgen grundlegende Einstellungen:</p>
+  <ul>
+    <li>Land und Tastatur</li>
+    <li>Netzwerkverbindung</li>
+    <li>Microsoft-Konto oder lokales Konto</li>
+    <li>Datenschutzeinstellungen</li>
+    <li>PC-Name</li>
+  </ul>
+
+  <h2>8. Treiber und Updates</h2>
+  <ol>
+    <li>Windows Update öffnen.</li>
+    <li>Alle verfügbaren Updates installieren.</li>
+    <li>Optional: Chipsatz- und Mainboard-Treiber vom Hersteller installieren.</li>
+    <li>Grafikkartentreiber (NVIDIA/AMD/Intel) herunterladen.</li>
+  </ol>
+
+  <h2>9. Fertig</h2>
+  <p>Windows ist nun einsatzbereit und der PC kann individuell eingerichtet werden.</p>
+
+</body>
+
+ 
+</html>
