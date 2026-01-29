@@ -1,56 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wie man einen Pc baut</title>
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: hsl(202, 100%, 50%);
-        }
-
-        ul li {
-            float: left;
-            margin: 20px;
-            font-family: monospace;
-        }
-
-        ul li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 40px;
-        }
-
-        h1 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 50px;
-            text-decoration-line: underline ;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 35px;
-            text-align: center;
-        }
-    </style>
+    <title>Weltenquiz</title>
 </head>
 
 <body>
-    <ul>
-        <li><a href="Komponenten.html">Komponenten aussuchen</a></li>
-        <li><a href="Bau.html">Bau Prozess</a></li>
-        <li><a href="Windows.html">Windows Installation und Setup</a></li>
-    </ul>
-    <h1>So baust du deinen eigenen Pc!</h1>
-    <h2>Oben in der Navigationsleiste sind die Schritte angegeben, viel Spaß!</h2>
+
+    <div id="start">
+        <h1>🌍Weltenquiz</h1>
+        <button onclick="startQuiz()">Los geht's</button>
+    </div>
+
+
+    <div id="quiz" style="display:none;">
+        <h2 id="frage"></h2>
+        <h3 id="Ende"></h3>
+
+
+        <button onclick="antwort(0)">Antwort A</button>
+        <button onclick="antwort(1)">Antwort B</button>
+        <button onclick="antwort(2)">Antwort C</button>
+
+        <p id="meldung"></p>
+    </div>
+
+    <script>
+        const fragen = [
+            {
+                text: "Was ist die Hauptstadt von Deutschland?",
+                antworten: ["Berlin", "München", "Hamburg"],
+                richtig: 0
+            },
+            {
+                text: "Welcher Planet ist der größte?",
+                antworten: ["Mars", "Jupiter", "Erde"],
+                richtig: 1
+            },
+            {
+                text: "Wie viele Kontinente gibt es?",
+                antworten: ["6", "7", "8"],
+                richtig: 1
+            },
+            {
+                text: "Wie viele Bundesländer hat Österreich?",
+                antworten: ["8", "7", "9"],
+                richtig: 2
+            },
+            {
+                text: "Was ist der längste Fluss der Welt?",
+                antworten: ["Nil", "Amazonas", "Donau"],
+                richtig: 0
+            }
+        ];
+
+        let nr = 0;
+
+        function startQuiz() {
+            document.getElementById("start").style.display = "none";
+            document.getElementById("quiz").style.display = "block";
+            anzeigen();
+        }
+
+        function anzeigen() {
+
+
+            document.getElementById("frage").textContent = fragen[nr].text;
+
+            const buttons = document.querySelectorAll("#quiz button");
+            buttons.forEach((btn, i) => {
+                btn.textContent = fragen[nr].antworten[i];
+            });
+
+            document.getElementById("meldung").textContent = "";
+
+
+        }
+
+        function antwort(index) {
+            if (index === fragen[nr].richtig) {
+                document.getElementById("meldung").textContent = "Richtig ";
+            } else {
+                document.getElementById("meldung").textContent = "Falsch ";
+            }
+
+            nr++;
+
+            if (nr < fragen.length) {
+                setTimeout(anzeigen, 500);
+            } else {
+                document.getElementById("Ende").textContent = "Quiz beendet ";
+                document.getElementById("meldung").textContent = "";
+                function weiter() { document.getElementById("quiz").style.display = "none"; }
+                
+
+            }
+        }
+
+    </script>
+    <style>
+        h1 {
+            color: rgb(68, 136, 0);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 40px
+        }
+
+        button {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px
+        }
+    </style>
+
 </body>
 
 </html>
