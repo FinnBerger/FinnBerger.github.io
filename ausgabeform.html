@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="form.html">Formular</a>
+        <a href="ausgabeform.html">Ausgabe</a>
+    </nav>
+        <h1>Vorname:</h1>
+    <p id="vornameAusgabe"></p>
+    <h1>Nachname:</h1>
+    <p id="nachnammeAusgabe"></p>
+    <h1>E-Mail:</h1>
+    <p id="emailAusgabe"></p>
+    <h1>Telefonnummer</h1>
+    <p id="telefonnummerAusgabe"></p>
+    <h1>Lieblingsfarbe:</h1>
+    <p id="farbeAusgabe"></p>
+    <h1>Geburtsdatum:</h1>
+    <p id="Geburtsdatumausgabe"></p>
+    
+
+
+
+    <style>
+        h1{
+            font-size: 35px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+    </style>
+
+</body>
+<script>
+
+    const vorname = localStorage.getItem("Vorname");
+    document.querySelector("#vornameAusgabe").textContent = vorname;
+
+    const nachname = localStorage.getItem("Nachname")
+    document.querySelector("#nachnammeAusgabe").textContent = nachname;
+
+    const email = localStorage.getItem("Email")
+    document.querySelector("#emailAusgabe").textContent = email;
+
+    const nummer = localStorage.getItem("Telefonnummer")
+    document.querySelector("#telefonnummerAusgabe").textContent = nummer;
+
+    const farbe = localStorage.getItem("farbe")
+    document.querySelector("#farbeAusgabe").textContent = farbe;
+
+    const datum = localStorage.getItem("Geburtsdatum")
+    document.querySelector("#Geburtsdatumausgabe").textContent = datum;
+
+
+</script>
+
+</html>
